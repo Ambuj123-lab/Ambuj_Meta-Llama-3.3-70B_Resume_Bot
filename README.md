@@ -14,7 +14,7 @@ This is an interactive AI chatbot designed to answer questions about my resume. 
 -   **NLP:** Natural Language Processing techniques to understand user queries.
 -   **Render:** The cloud platform used for deploying the application.
 -   
-**HTML/CSS (Basic):** For minimal web interfapplication
+    **HTML/CSS (Basic):** For minimal web interfapplication
 ### How to Interact
 -   You can access the live bot and ask questions here:
     **Live Demo:** [https://ambuj-resume-bot.onrender.com](https://ambuj-resume-bot.onrender.com)
