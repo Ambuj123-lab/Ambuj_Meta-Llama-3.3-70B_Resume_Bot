@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambuj's Resume AI Assistant</title>
+    <link rel="icon" href="/static/logo.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Very light background for the page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333; /* Default text color */
+        }
+        .chat-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            height: 80vh; /* Responsive height */
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #6A0000; /* Dark Maroon Red header */
+            color: white;
+            padding: 15px 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .chat-header img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white; /* White border for logo */
+        }
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #ffffff; /* Pure white background for messages area */
+            border-bottom: 1px solid #ddd;
+        }
+        .message-bubble {
+            max-width: 80%;
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            border-radius: 20px;
+            line-height: 1.5;
+            word-wrap: break-word; /* Ensure long words break */
+        }
+        .user-message {
+            background-color: #4A4A4A; /* Dark Grey for user messages */
+            color: white; /* White text on dark grey background */
+            align-self: flex-end;
+            margin-left: auto;
+            border-bottom-right-radius: 5px; /* Softer corner */
+        }
+        .bot-message {
+            background-color: #EFEFEF; /* Very Light Grey for bot messages */
+            color: #333333; /* Dark text on light grey background */
+            align-self: flex-start;
+            margin-right: auto;
+            border-bottom-left-radius: 5px; /* Softer corner */
+        }
+        .chat-input {
+            display: flex;
+            padding: 15px 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        .chat-input input {
+            flex-grow: 1;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 10px 15px;
+            font-size: 1em;
+            outline: none;
+            margin-right: 10px;
+        }
+        .chat-input button {
+            background-color: #6A0000; /* Dark Maroon Red button */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .chat-input button:hover {
+            background-color: #550000; /* Slightly darker red on hover */
+        }
+        .typing-indicator {
+            font-style: italic;
+            color: #888;
+            margin-top: 5px;
+            padding-left: 10px;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s ease-in-out;
+        }
+        .typing-indicator.active {
+            opacity: 1;
+        }
+        /* Scrollbar styling */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+        .chat-messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="/static/logo.png" alt="Ambuj's Logo">
+            Ambuj's AI Resume Assistant
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message-bubble bot-message">Hello! I am Ambuj Kumar Tripathi's AI assistant. I was created by Ambuj Kumar Tripathi to help answer questions about his professional background. How can I help you today?</div>
+        </div>
+        <div class="typing-indicator" id="typing-indicator">Ambuj's AI is typing...</div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Ask me about Ambuj's resume or anything else...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const typingIndicator = document.getElementById('typing-indicator');
+
+        let chatHistory = []; // To store chat history for context
+
+        function addMessage(sender, message) {
+            const messageBubble = document.createElement('div');
+            messageBubble.classList.add('message-bubble');
+            messageBubble.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+            messageBubble.textContent = message;
+            chatMessages.appendChild(messageBubble);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+
+            addMessage('user', message);
+            userInput.value = ''; // Clear input field
+
+            typingIndicator.classList.add('active'); // Show typing indicator
+
+            // Add user message to history
+            chatHistory.push({"role": "user", "content": message});
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message, history: chatHistory })
+                });
+                const data = await response.json();
+                addMessage('bot', data.response);
+                // Add bot message to history
+                chatHistory.push({"role": "assistant", "content": data.response});
+
+            } catch (error) {
+                console.error('Error:', error);
+                addMessage('bot', 'Oops! Something went wrong. Please try again.');
+            } finally {
+                typingIndicator.classList.remove('active'); // Hide typing indicator
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Initial bot message is already in HTML, but if we wanted dynamic, could add here.
+        // For now, it's static in the HTML.
+    </script>
+</body>
+</html>

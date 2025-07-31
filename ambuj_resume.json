@@ -1,0 +1,231 @@
+{
+  "personal_info": {
+    "name": "Ambuj Kumar Tripathi",
+    "linkedin": "https://www.linkedin.com/in/ambuj-tripathi-042b4a118",
+    "summary": "Transitioning telecom engineer with 5+ years of FTTP & Fiber Network Experience, now focused on AI/cloud careers. Industry-certified with Google Cloud (GenAI, Vertex AI, IBM SkillsBuild) and Deloitte Data Analytics Job Simulation (Forage), where I analyzed business data, built Tableau dashboards, and classified insights in Excel. I have practical hands-on experience building & deploying live bots using IBM WatsonX and Hugging Face (self-coded, web-hosted demos). I've demonstrated expertise in Google Vertex AI by creating and managing virtual machines, configuring cloud instances, running Cloud Shell/SSH commands, and deploying ML environments. I am a fast learner, strong in AI prompt engineering, and capable of real project delivery. Open for entry-level AI, ML, cloud, or bot developer roles, ready to blend telecom domain strengths with new-gen AI/cloud skills in digital-first teams. With a background in telecom network systems and a growing expertise in generative AI and prompt engineering, I aim to bridge traditional infrastructure planning with modern AI-powered automation and design thinking. I am open to contributing in AI-driven projects, product experiments, or prompt optimization tasks where curiosity, clarity, and creative execution are valued. I also cleared BITSOM x Masai’s Product Management with Generative & Agentic AI program (2025)."
+  },
+  "education": [
+    {
+      "degree": "PGDC - Power Transmission & Distribution",
+      "university": "National Power Training Institute, Badarpur (Ministry of Power), New Delhi",
+      "graduation_year": "2016",
+      "grade": "64.75%"
+    },
+    {
+      "degree": "B.Tech in Electrical and Electronics Engineering",
+      "university": "Uttar Pradesh Technical University, Lucknow",
+      "graduation_year": "2013",
+      "grade": "65.64%"
+    },
+    {
+      "degree": "Intermediate",
+      "board": "CBSE BOARD",
+      "school": "Sunshine School, Muzaffarpur, Bihar",
+      "grade": "73.6%"
+    },
+    {
+      "degree": "Matriculation",
+      "board": "CBSE Board",
+      "school": "DAV Public School, Muzaffarpur, Bihar",
+      "grade": "83.8%"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Associate Engineer – Fibre & Network Delivery",
+      "company": "British Telecom Global Services Pvt. Ltd",
+      "location": "Gurugram",
+      "responsibilities": [
+        "Core FTTP planning and site design for new infrastructure in the UK region.",
+        "Provided cost/time estimates based on proposals; used Amanda for postcode mapping.",
+        "Used Piper Tool to check equipment availability and designing proposal of network design and import design into piper for site works.",
+        "Coordinated with UK field engineers for ground execution.",
+        "Recognized as Top Performer in Jan 2023 for quality output.",
+        "Participated in root cause analysis investigations following equipment failures or malfunctions, ensuring appropriate corrective actions were taken promptly.",
+        "Mentored interns and instructing new personnel on applicable guidelines and techniques."
+      ]
+    },
+    {
+      "title": "O&M Engineer",
+      "company": "Tata Communications Transformation Services Ltd",
+      "location": "Lucknow",
+      "responsibilities": [
+        "Collecting and Analysing performance and work progress of Site Engineers to improve project efficiency and timeliness.",
+        "Managed Billing of OSP, ISP, Electricity bills and Chasing vendor for Trenching & Ducting Work Completion and PO Closing.",
+        "Handled the Invoicing and Compliance to adhere the correct payment terms for the vendor associated with the project.",
+        "Participated in Vendor management activity in Ariba/Aparajitha to ensure correct information updated of vendor to adhere payment cycles and terms.",
+        "Worked upon Degradation Report, Low RX Report, OTDR Loss report for improved productivity and Consumer Satisfaction.",
+        "Worked on WOFO-Report of vehicles, GPS tracking/Google location Tracking report creation, DPR/ATR Report. Raising Planned Events on portal-SIA, FRT-Billing, Pending Alarms, MPLS Alarm report generation. Fibre Cut Reports (2*7).",
+        "Improved login SLA of Field Engineers by tracking and following up pending tickets as per priority and getting them resolved within timeline to adhere TAT and SLA.",
+        "Handling and resolving vendor and client queries. Providing root cause and solution on escalations.",
+        "Preparing MIS reports (weekly & monthly) and sharing with higher management."
+      ]
+    },
+    {
+      "title": "Engineer - Optical Fiber Execution Engineer",
+      "company": "Annu Infra Construct India Pvt. Ltd",
+      "location": "Kolkata",
+      "responsibilities": [
+        "OFC - Fibre Rollout For Defense Cable Projects - NFS (Network For Spectrum) - ETP (Eastern Telecom Project) Headquartered at Siliguri.",
+        "Responsible for the construction of a mega communications network for the armed forces - Army and Air Force for construction of NLD (National Long distance) backbone - Package F - West Bengal, Orissa, Bihar, Jharkhand, Andaman & Nicobar, Sikkim, under the Network for Spectrum (NFS) project.",
+        "Execution - Laying of OFC, Commissioning, Route surveying, Route Index Diagram, Site Management.",
+        "Testing: Losses Chromatic dispersion, Splicing, Attenuation, OTDR Traces.",
+        "Managed Billing which includes Invoices, Tendering related documents, Vendor Management and compliance clearance."
+      ]
+    },
+    {
+      "title": "System Administrator",
+      "company": "Tata Consultancy Services (TCS)",
+      "location": "Noida",
+      "responsibilities": [
+        "Associated in Delhi Jal Board - Revenue Management System project - Trained and resolved queries of department as the Billing process was automated using Handheld Devices.",
+        "eMigrate - Ministry Of Overseas And Indian Affairs – Verification of Documents and created of training documents (Computer based Training) for portal users.",
+        "ITBA - Deptt. of Income Tax – Involved in the networking department which included the monitoring of servers on CA Tool."
+      ]
+    }
+  ],
+  "skills": {
+    "generative_ai_ml": [
+      "Generative AI",
+      "Artificial Intelligence",
+      "Natural Language Processing",
+      "Jupyter Notebook",
+      "Prompt Engineering",
+      "Large Language Models (LLMs)",
+      "Deep Learning",
+      "Few-shot prompting",
+      "Zero Shot Prompting",
+      "Chain of Thoughts",
+      "Responsible AI",
+      "Dialogue Management",
+      "Intents",
+      "Entity Recognition",
+      "Sentiment Analysis",
+      "Machine Learning Fundamentals",
+      "Supervised & Unsupervised Learning",
+      "Chatbot Development",
+      "Gemini MultiModal",
+      "Image Generation",
+      "Image Analysis",
+      "Vertex AI",
+      "Gemini APIs",
+      "Heygen",
+      "Gradio",
+      "Hugging Face",
+      "LLM Interaction"
+    ],
+    "programming_languages": [
+      "Python (Basic)"
+    ],
+    "cloud_platforms": [
+      "Google Cloud Platform (GCP)",
+      "IBM Watson and IBM Cloud",
+      "Microsoft Azure (Familiar)"
+    ],
+    "telecom_networking": [
+      "Optical Fiber Communication (OFC)",
+      "FTTP Planning Tools (Amanda, Piper Tool, NGWFMT)",
+      "OTDR Testing",
+      "Losses in Fibre Cables",
+      "Attenuation Loss",
+      "CD Test",
+      "Identifying nodes",
+      "Field Survey & Documentation"
+    ],
+    "tools_platforms": [
+      "Notion",
+      "Adobe Podcast",
+      "Adobe Firefly",
+      "Adobe Captivate",
+      "Canva",
+      "Orion",
+      "ServiceNow",
+      "Ariba",
+      "IBM WatsonX",
+      "Hugging Face Spaces",
+      "BigQuery (Familiar)"
+    ],
+    "other_technical": [
+      "Virtual Machine Management",
+      "Process Improvement Strategies",
+      "Basic Data Querying",
+      "Temperature Control",
+      "Token Limits"
+    ],
+    "soft_skills": [
+      "Communication skills",
+      "Leadership",
+      "Problem Solving",
+      "Data Analysis",
+      "API Integration",
+      "Prompt Engineering"
+    ]
+  },
+  "projects": [
+    {
+      "name": "AI Resume Chatbot Integration using IBM WatsonX & Netlify",
+      "description": "Interactive resume chatbot with dynamic Q&A, greetings, skills-based responses, and fallback handling. Designed and deployed an AI-powered chatbot using IBM WatsonX Assistant. Built conversation flow with intents, entities, and dialogue nodes. Integrated the chatbot into a static webpage using HTML, and hosted it on Netlify for public access. Created custom intents, entities, and dialog flows in WatsonX Assistant. Used child nodes and conditional logic for dynamic user responses. Embedded WatsonX Assistant WebChat script into index.html. Demonstrated end-to-end chatbot lifecycle from design to hosting.",
+      "technologies_used": ["IBM WatsonX Assistant", "Netlify", "HTML", "Intents", "Entities", "Dialogue Nodes", "WebChat Script", "Chatbot Development"]
+    },
+    {
+      "name": "Ambuj AI ChatBot – Resume Chatbot using Gradio (Deployed on Hugging Face Spaces)",
+      "description": "Prompt-engineered resume chatbot built using Python logic and ChatGPT-assisted development, deployed on Hugging Face Spaces. Developed a rule-based chatbot using Python and Gradio’s ChatInterface, hosted live on Hugging Face Spaces, to simulate real-time Q&A based on my professional resume. The bot responds to interview-style questions using pre-defined keyword logic for domains like work experience, certifications, tools, and projects. Project Scope: Personal branding, recruiter interaction, and AI-based resume assistant. Future Scope: Model integration via Hugging Face Transformers (e.g., DialoGPT, DistilGPT2), ability to upgrade with fine-tuned LLMs based on system specifications, can be scaled to handle semantic queries via NLP libraries (spaCy, transformers).",
+      "technologies_used": ["Python", "Gradio", "Hugging Face Spaces", "ChatGPT (assisted development)", "Prompt Engineering", "Rule-based Chatbot", "NLP (future scope)"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Deloitte Australia Data Analytics Completion Certificate",
+      "issuer": "Forage (in collaboration with Deloitte)"
+    },
+    {
+      "name": "Prompt Design in Vertex AI (Lab-based skill badge)",
+      "issuer": "Google Cloud"
+    },
+    {
+      "name": "Get Started with Language Models in Azure Databricks",
+      "issuer": "Microsoft",
+      "notes": "Certificate available on request"
+    },
+    {
+      "name": "Review responsible AI principles for language models in Azure Databricks",
+      "issuer": "Microsoft",
+      "notes": "Certificate available on request"
+    },
+    {
+      "name": "Build Real World AI Applications with Gemini and Imagen (Lab-based skill badge)",
+      "issuer": "Google Cloud"
+    },
+    {
+      "name": "Explore Generative AI with the Vertex AI Gemini API Skill Badge",
+      "issuer": "Google Cloud"
+    },
+    {
+      "name": "Artificial Intelligence Fundamentals",
+      "issuer": "IBM"
+    },
+    {
+      "name": "Generative AI in Action",
+      "issuer": "IBM"
+    },
+    {
+      "name": "Deep Learning Essentials",
+      "issuer": "IBM"
+    },
+    {
+      "name": "LFS118: Ethical Principles for Conversational AI",
+      "issuer": "The Linux Foundation"
+    },
+    {
+      "name": "BITSOM x Masai’s Product Management with Generative & Agentic AI program",
+      "issuer": "BITSOM x Masai",
+      "notes": "Cleared program (2025); opted for a self-paced learning path due to financial priorities."
+    }
+  ],
+  "interests": [
+    "Script writing",
+    "AI-based explainer videos (YouTube) - Create YouTube shorts from scratch—concept, custom AI prompt, tailored image/motion, voiceover, editing—ensuring every video is unique and thoughtfully produced.",
+    "Exploring AI Tools and Freelance Gig Experimentation",
+    "Beta-testing & feedback for new AI tools/platforms"
+  ]
+}
