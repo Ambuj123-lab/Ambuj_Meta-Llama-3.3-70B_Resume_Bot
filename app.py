@@ -2,8 +2,10 @@ import os
 import json
 import requests
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS  # Nayi line: CORS support ke liye
 
 app = Flask(__name__)
+CORS(app)  # Nayi line: CORS ko app par enable karne ke liye
 
 # Load Ambuj's resume data
 # Ensure ambuj_resume.json is in the same directory as app.py
@@ -93,7 +95,7 @@ def get_llm_response(user_message, history=None):
         if "error" in response_json:
             error_message = response_json["error"].get("message", "An unknown error occurred with the LLM API.")
             if "insufficient_quota" in error_message or "rate limit" in error_message:
-                 return "I'm sorry, I've hit a temporary usage limit. Please try again in a few minutes or tomorrow. Ambuj Kumar Tripathi will resolve this soon."
+                return "I'm sorry, I've hit a temporary usage limit. Please try again in a few minutes or tomorrow. Ambuj Kumar Tripathi will resolve this soon."
             return f"LLM API Error: {error_message}"
 
         return response_json["choices"][0]["message"]["content"]
